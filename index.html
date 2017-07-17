@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en-za">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique Circular Navigation</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body>
+        <nav id="menu">
+            <a href="#menu">
+                <span>menu</span>
+            </a>
+            <a href="#close" class="close-btn">
+                <span>close</span>
+            </a>
+            
+            <ul>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+                <li><a href="#"><span class="rotated-text">Navigation Link</span></a></li>
+            </ul>
+        </nav>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jquery.fittext.js"></script>
+        <script type="text/javascript" src="js/jquery.lettering.js"></script>
+        <script type="text/javascript" src="js/circletype.js"></script>
+        <script type="text/javascript">
+            window.onload = function () {
+                console.log("works");
+                $("ul li:nth-of-type(n+1):nth-of-type(-1n+1) > a span.rotated-text").circleType({ radius: 176, dir: -1 });
+                $("ul li:nth-of-type(n+2):nth-of-type(-1n+2) > a span.rotated-text").circleType({ radius: 224, dir: -1 });
+                $("ul li:nth-of-type(n+3):nth-of-type(-1n+3) > a span.rotated-text").circleType({ radius: 272, dir: -1 });
+                $("ul li:nth-of-type(n+4):nth-of-type(-1n+4) > a span.rotated-text").circleType({ radius: 320, dir: -1 });
+                $("ul li:nth-of-type(n+5):nth-of-type(-1n+5) > a span.rotated-text").circleType({ radius: 368, dir: -1 });
+                $("ul li:nth-of-type(n+6):nth-of-type(-1n+6) > a span.rotated-text").circleType({ radius: 416, dir: -1 });
+            };
+
+        </script>
+    </body>
+</html>

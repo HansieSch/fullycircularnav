@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+a[href="#menu"], .close-btn {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    height: 256px;
+    width: 256px;
+    background-color: darkred;
+    color: white;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+a[href="#menu"] span, .close-btn span {
+    display: block;
+    position: relative;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    line-height: 64px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Verdana;
+    font-size: 12px;
+}
+
+.close-btn {
+    display: none;
+}
+
+#menu:target .close-btn {
+    display: block;
+}
+
+#menu:target a[href="#menu"] {
+    display: none;
+}
+
+ul li > a {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    transform: translate(-00%, -100%) rotate(45deg);
+    transition: transform 0.5s cubic-bezier(0.77, -0.24, 0.18, 1.2), background-color 0.3s ease, color 0.3s ease;
+    height: 352px;
+    width: 352px;
+    border-radius: 50%;
+    color: white;
+}
+
+#menu:target ul li > a {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#menu:target ul li > a:hover {
+    background-color: white;
+    color: black;
+}
+
+ul li:nth-of-type(1) > a {
+    height: 352px;
+    width: 352px;
+    z-index: 99;
+    background-color: hsl(90, 52%, 51%);
+}
+
+ul li:nth-of-type(2) > a {
+    height: 448px;
+    width: 448px;
+    z-index: 98;
+    background-color: hsl(173, 100%, 33%);
+    transition-delay: 0.1s, 0s, 0s;
+}
+
+ul li:nth-of-type(3) > a {
+    height: 544px;
+    width: 544px;
+    z-index: 97;
+    background-color: hsl(204, 100%, 36%);
+    transition-delay: 0.2s, 0s, 0s;
+}
+
+ul li:nth-of-type(4) > a {
+    height: 640px;
+    width: 640px;
+    z-index: 96;
+    background-color: hsl(295, 57%, 36%);
+    transition-delay: 0.3s, 0s, 0s;
+}
+
+ul li:nth-of-type(5) > a {
+    height: 736px;
+    width: 736px;
+    z-index: 95;
+    background-color: hsl(342, 87%, 51%);
+    transition-delay: 0.4s, 0s, 0s;
+}
+
+ul li:nth-of-type(6) > a {
+    height: 832px;
+    width: 832px;
+    z-index: 94;
+    background-color: hsl(30, 93%, 54%);
+    transition-delay: 0.5s, 0s, 0s;
+}
+
+span.rotated-text {
+    display: block;
+    position: relative;
+    top: 100%;
+    left: 50%;
+    transform: translateY(-100%);
+    color: inherit;
+    width: 1%;
+    line-height: 48px;
+    font-size: 18px;
+    font-family: Verdana;
+}
